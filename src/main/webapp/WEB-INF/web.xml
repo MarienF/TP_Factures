@@ -11,6 +11,7 @@
 	   <url-pattern>/home</url-pattern>
 	</servlet-mapping>
 
+
 	<servlet>
 		<servlet-name>ClientAffichageServlet</servlet-name>
 		<servlet-class>fr.epsi.controller.ClientAffichageServlet</servlet-class>
