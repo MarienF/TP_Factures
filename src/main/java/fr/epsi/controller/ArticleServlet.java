@@ -1,9 +1,7 @@
 package fr.epsi.controller;
 
 import fr.epsi.dto.ArticleDTO;
-import fr.epsi.dto.ClientDTO;
 import fr.epsi.service.ArticleService;
-import fr.epsi.service.ClientService;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;

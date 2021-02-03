@@ -2,8 +2,11 @@ package fr.epsi.service;
 
 import fr.epsi.dao.ArticleDao;
 import fr.epsi.dao.ArticleDaoImpl;
+import fr.epsi.dao.ClientDao;
+import fr.epsi.dao.ClientDaoImpl;
 import fr.epsi.dto.ArticleDTO;
 import fr.epsi.entite.Article;
+import fr.epsi.entite.Client;
 
 import javax.annotation.Resource;
 import javax.ejb.Stateless;
@@ -12,6 +15,7 @@ import javax.ejb.TransactionManagementType;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.UserTransaction;
+import java.util.List;
 
 @Stateless
 @TransactionManagement(TransactionManagementType.BEAN)
@@ -31,4 +35,10 @@ public class ArticleServiceImpl implements ArticleService{
 
         dao.create(article);
     }
+
+    public List<Article> getArticles() {
+        ArticleDao articleDao = new ArticleDaoImpl(em, utx);
+        return articleDao.getArticles();
+    }
+
 }

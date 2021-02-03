@@ -1,9 +1,11 @@
 package fr.epsi.dao;
 
 import fr.epsi.entite.Article;
+import fr.epsi.entite.Client;
 
 import javax.persistence.EntityManager;
 import javax.transaction.*;
+import java.util.List;
 
 public class ArticleDaoImpl implements ArticleDao {
 
@@ -43,4 +45,9 @@ public class ArticleDaoImpl implements ArticleDao {
             e.printStackTrace();
         }
     }
+
+    public List<Article> getArticles() {
+        return em.createQuery("select a from Article a", Article.class).getResultList();
+    }
+
 }

@@ -4,6 +4,7 @@ import fr.epsi.entite.Client;
 
 import javax.persistence.EntityManager;
 import javax.transaction.*;
+import java.util.List;
 
 public class ClientDaoImpl implements ClientDao {
 
@@ -43,4 +44,9 @@ public class ClientDaoImpl implements ClientDao {
             e.printStackTrace();
         }
     }
+
+    public List<Client> getClients() {
+        return em.createQuery("select c from Client c", Client.class).getResultList();
+    }
+
 }

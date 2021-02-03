@@ -11,6 +11,8 @@
 <body>
 <%@include file="commons/menu.jsp"%>
 
+<h2>Création d'un article</h2>
+
 <form action="create" method="post">
     <label for="nomArticle">Nom</label> <input type="text" name="nomArticle" />
     <label for="prixArticle">Prix</label> <input type="text" name="prixArticle" />
