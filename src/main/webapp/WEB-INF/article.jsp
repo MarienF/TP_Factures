@@ -18,7 +18,7 @@
     <thead>
     <tr>
         <th>Nom</th>
-        <th>Adresse</th>
+        <th>Prix</th>
     </tr>
     </thead>
 
@@ -29,7 +29,7 @@
                 <c:out value="${article.nom}"/>
             </td>
             <td>
-                <c:out value="${article.prix}"/> ?
+                <c:out value="${article.prix}"/>
             </td>
         </tr>
     </c:forEach>

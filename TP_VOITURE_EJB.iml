@@ -20,6 +20,7 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
+          <factory-entry name="facturePU" />
           <factory-entry name="voiturePU" />
         </datasource-mapping>
         <naming-strategy-map />

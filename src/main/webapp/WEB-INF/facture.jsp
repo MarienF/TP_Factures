@@ -12,36 +12,40 @@
 <body>
 <%@include file="commons/menu.jsp"%>
 
-<h2>Liste des articles</h2>
+<h2>Liste des factures</h2>
 
 <table>
     <thead>
     <tr>
-        <th>Nom</th>
+        <th>Numero</th>
+        <th>Date</th>
+        <th>Client</th>
         <th>Prix</th>
     </tr>
     </thead>
 
     <tbody>
-    <c:forEach items="${articles}" var="article">
+    <c:forEach items="${factures}" var="facture">
         <tr>
             <td>
-                <c:out value="${article.nom}"/>
+                <c:out value="${facture.numero}"/>
             </td>
             <td>
-                <c:out value="${article.prix}"/>
+                <c:out value="${facture.date}"/>
+            </td>
+            <td>
+                <c:out value="${facture.client.nom}"/>
+            </td>
+            <td>
+                <c:out value="${facture.prix}"/>
+            </td>
+            <td>
+                <a href="facture/detail?id=<c:out value="${facture.id}"/>">+</a>
             </td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
-
-
-<div class="nav-wrapper">
-    <ul id="nav-mobile" class="hide-on-med-and-down">
-        <li><a href="article/create">AJOUTER UN ARTICLE</a></li>
-    </ul>
-</div>
 
 <%@include file="commons/footer.jsp"%>
 

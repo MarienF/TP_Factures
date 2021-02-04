@@ -11,6 +11,8 @@
 <body>
 <%@include file="commons/menu.jsp"%>
 
+<h2>Ajouter un client</h2>
+
 <form action="create" method="post">
     <label for="nomCLient">Nom</label> <input type="text" name="nomClient" />
     <label for="adresseCLient">Adresse</label> <input type="text" name="adresseCLient" />

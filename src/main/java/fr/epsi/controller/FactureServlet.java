@@ -1,6 +1,6 @@
 package fr.epsi.controller;
 
-import fr.epsi.service.ClientService;
+import fr.epsi.service.FactureService;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -9,16 +9,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class ClientAffichageServlet extends HttpServlet {
+public class FactureServlet extends HttpServlet {
 
     @EJB
-    private ClientService service;
+    private FactureService service;
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException
+        throws ServletException, IOException
     {
-        req.setAttribute("clients", service.getClients());
-        this.getServletContext().getRequestDispatcher("/WEB-INF/client.jsp").forward(req, resp);
+        req.setAttribute("factures", service.getFactures());
+        this.getServletContext().getRequestDispatcher("/WEB-INF/facture.jsp").forward(req, resp);
     }
-
 }

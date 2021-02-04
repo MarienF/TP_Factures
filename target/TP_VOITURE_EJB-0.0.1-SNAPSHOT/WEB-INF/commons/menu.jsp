@@ -13,7 +13,7 @@
       <a href="home" class="brand-logo">Logo</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="client">Clients</a></li>
-        <li><a href="voiture">Articles</a></li>
+        <li><a href="article">Articles</a></li>
         <li><a href="facture">Factures</a></li>
       </ul>
     </div>

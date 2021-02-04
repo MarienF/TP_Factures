@@ -11,6 +11,7 @@
 	   <url-pattern>/home</url-pattern>
 	</servlet-mapping>
 
+
 	<servlet>
 		<servlet-name>ClientAffichageServlet</servlet-name>
 		<servlet-class>fr.epsi.controller.ClientAffichageServlet</servlet-class>
@@ -46,4 +47,21 @@
 		<url-pattern>/article/create</url-pattern>
 	</servlet-mapping>
 
+
+	<servlet>
+		<servlet-name>FactureServlet</servlet-name>
+		<servlet-class>fr.epsi.controller.FactureServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FactureServlet</servlet-name>
+		<url-pattern>/facture</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>FactureDetailServlet</servlet-name>
+		<servlet-class>fr.epsi.controller.FactureDetailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FactureDetailServlet</servlet-name>
+		<url-pattern>facture/detail</url-pattern>
+	</servlet-mapping>
 </web-app>
